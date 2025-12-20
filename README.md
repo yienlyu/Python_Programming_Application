@@ -1,7 +1,10 @@
-1. dataset introduction (research question? hypothesis? objectives?)
+1. dataset introduction (research question / hypothesis / objectives)
 2. data exploration (data loading / missing data handing / basic visualization)
 3. explanation and discussion
 4. summary
+
+p.s. I've found the data source: https://data.mendeley.com/datasets/rr4rzzrjfc/2
+A vast and comprehensive dataset comprising 77,724 recently diagnosed diabetes patients from Istanbul province of Turkey in the year 2017, originally with the project title "Machine Learning for Prediction of Glycemic Control in Diabetes Mellitus"
 
 data includes:
 
