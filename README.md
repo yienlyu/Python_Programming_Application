@@ -1,3 +1,5 @@
+What we can do (maybe):
+
 1. dataset introduction (research question / hypothesis / objectives)
 2. data exploration (data loading / missing data handing / basic visualization)
 3. explanation and discussion
@@ -8,7 +10,7 @@ A vast and comprehensive dataset comprising 77,724 recently diagnosed diabetes p
 
 data includes:
 
-id
+id\n
 HbA1c
 Hba1c_change
 sex
