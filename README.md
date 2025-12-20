@@ -8,7 +8,7 @@ What we can do (maybe):
 p.s. I've found the data source: https://data.mendeley.com/datasets/rr4rzzrjfc/2
 A vast and comprehensive dataset comprising 77,724 recently diagnosed diabetes patients from Istanbul province of Turkey in the year 2017, originally with the project title "Machine Learning for Prediction of Glycemic Control in Diabetes Mellitus"
 
-data includes:
+data includes: (seems like there are no missing values)
 
 1. id
 2. HbA1c
