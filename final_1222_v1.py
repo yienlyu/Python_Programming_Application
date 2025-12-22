@@ -98,28 +98,28 @@ import matplotlib.pyplot as plt
 
 
 # ---------- Figure 1: Glycemic control proportion ----------
-title = "Proportion of Glycemic Control Status"
+title = "Proportion_of_Glycemic_Control_Status"
 
 plt.figure()
 df["Glycemic_control"].value_counts(normalize=True).sort_index().plot(kind="bar")
 plt.xticks([0, 1], ["Good control", "Poor control"], rotation=0)
 plt.ylabel("Proportion")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.show()
 
 # ---------- Figure 2: Age distribution (boxplot) ----------
-title = "Age Distribution by Glycemic Control"
+title = "Age_Distribution_by_Glycemic_Control"
 
 plt.figure()
 plt.boxplot([df_good["age"].dropna(), df_poor["age"].dropna()], labels=["Good", "Poor"])
 plt.ylabel("Age")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.show()
 
 # ---------- Figure 3: Sex proportion ----------
-title = "Sex Distribution by Glycemic Control"
+title = "Sex_Distribution_by_Glycemic_Control"
 
 sex_prop = pd.DataFrame({
     "Good": df_good["sex"].value_counts(normalize=True),
@@ -135,12 +135,12 @@ plt.bar(x + width/2, sex_prop["Poor"], width, label="Poor")
 plt.xticks(x, sex_prop.index)
 plt.ylabel("Proportion")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.legend()
 plt.show()
 
 # ---------- Figure 4: Lipid profile target achievement ----------
-title = "Lipid Profile Control by Glycemic Status"
+title = "Lipid_Profile_Control_by_Glycemic_Status"
 
 lipid_good = {
     "HDL>35": (df_good["HDL"] > 35).mean(),
@@ -163,12 +163,12 @@ plt.bar(x + width/2, lipid_poor.values(), width, label="Poor")
 plt.xticks(x, labels)
 plt.ylabel("Proportion Achieving Target")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.legend()
 plt.show()
 
 # ---------- Figure 5: Creatinine distribution ----------
-title = "Creatinine Distribution by Glycemic Control"
+title = "Creatinine_Distribution_by_Glycemic_Control"
 
 plt.figure()
 plt.boxplot(
@@ -177,11 +177,11 @@ plt.boxplot(
 )
 plt.ylabel("Creatinine")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.show()
 
 # ---------- Figure 6: Comorbidities prevalence ----------
-title = "Comorbidities by Glycemic Control"
+title = "Comorbidities_by_Glycemic_Control"
 
 comorbidities = ["nephropaties", "hypertension_i10", "ischemic_heart_dis"]
 
@@ -196,12 +196,12 @@ plt.bar(x + width/2, poor_com, width, label="Poor")
 plt.xticks(x, ["CKD", "HTN", "IHD"])
 plt.ylabel("Proportion")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/{title}")
 plt.legend()
 plt.show()
 
 # ---------- Figure 7: Diabetes medication usage ----------
-title = "Diabetes Medication Usage by Glycemic Control"
+title = "Diabetes_Medication_Usage_by_Glycemic_Control"
 
 meds = ["metformin_hcl", "insulin_glarjin", "dapagliflozin", "sitagliptin"]
 
@@ -216,12 +216,12 @@ plt.bar(x + width/2, poor_med, width, label="Poor")
 plt.xticks(x, ["Metformin", "Basal insulin", "SGLT2i", "DPP4i"], rotation=20)
 plt.ylabel("Proportion of Use")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.legend()
 plt.show()
 
 # ---------- Figure 8A: HbA1c boxplot ----------
-title = "HbA1c Distribution by Glycemic Control"
+title = "HbA1c_Distribution_by_Glycemic_Control"
 
 plt.figure()
 plt.boxplot(
@@ -230,11 +230,11 @@ plt.boxplot(
 )
 plt.ylabel("HbA1c (%)")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.show()
 
 # ---------- Figure 8B: HbA1c change boxplot ----------
-title = "HbA1c Change by Glycemic Control"
+title = "HbA1c_Change_by_Glycemic_Control"
 
 plt.figure()
 plt.boxplot(
@@ -243,7 +243,7 @@ plt.boxplot(
 )
 plt.ylabel("HbA1c Change")
 plt.title(title)
-plt.savefig("./plt_output/f'{title}")
+plt.savefig("./plt_output/" + title)
 plt.show()
 
 
