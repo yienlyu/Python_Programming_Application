@@ -9,6 +9,7 @@ df = pd.read_csv("./data/data_export_icin.csv", sep=";")
 df_good = df[df["Glycemic_control"] == 0]
 df_poor = df[df["Glycemic_control"] == 1]
 
+
 # ===============================
 # Descriptive Statistics
 # ===============================
