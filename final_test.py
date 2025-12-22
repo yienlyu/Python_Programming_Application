@@ -1,9 +1,7 @@
 #!/usr/bin/python
 
+# preprocess
 import pandas as pd
-
-
-# process
 
 df = pd.read_csv("./data/data_export_icin.csv", sep=';')
 
@@ -18,13 +16,15 @@ for col in df.columns:
 print("\nmissing values: ")
 print(df.isnull().sum())
 
-'''
-# plot
 
+
+# plot
 import matplotlib.pyplot as plt
+
 
 # Basic info
 summary = df[['HbA1c','Hba1c_change','age']].describe()
+
 
 # Plot HbA1c distribution
 plt.figure()
@@ -44,6 +44,7 @@ plt.title('Age Distribution')
 plt.savefig("./plt_output/age_distribution.png")
 plt.show()
 
+
 # Glycemic control counts
 plt.figure()
 df['Glycemic_control'].value_counts().sort_index().plot(kind='bar')
@@ -53,7 +54,6 @@ plt.title('Glycemic Control Outcome')
 plt.savefig("./plt_output/glycemic_control_outcome.png")
 plt.show()
 
-summary
 
 # LDL / HDL / Triglyceride
 plt.figure()
@@ -109,4 +109,3 @@ plt.ylabel('Proportion of Use')
 plt.title('Common Diabetes Medication Usage')
 plt.savefig("./plt_output/common_diabetes_medication_usage.png")
 plt.show()
-'''
