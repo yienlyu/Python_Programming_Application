@@ -1,0 +1,54 @@
+
+##########
+
+Hypertension vs Glycemic control
+hypertension_i10      0      1
+Glycemic_control              
+0                  7949  20842
+1                 12843  36090
+Chi-square = 17.12, p-value = 3.506e-05
+
+##########
+
+Sex vs Glycemic control
+sex                   1      2
+Glycemic_control              
+0                 20464   8327
+1                 31271  17662
+Chi-square = 418.59, p-value = 4.948e-93
+
+##########
+
+Insulin use vs Glycemic control
+insulin_use       False  True 
+Glycemic_control              
+0                 25426   3365
+1                 25003  23930
+Chi-square = 11016.50, p-value = 0.000e+00
+
+##########
+
+Hypertensionvs Glycemic control
+hypertension_i10      0      1
+Glycemic_control              
+0                  7949  20842
+1                 12843  36090
+Chi-square = 17.12, p-value = 3.506e-05
+
+##########
+
+CKDvs Glycemic control
+nephropaties          0    1
+Glycemic_control            
+0                 28531  260
+1                 48491  442
+Chi-square = 0.00, p-value = 1.000e+00
+
+##########
+
+Dyslipidemiavs Glycemic control
+lipoprotein_met_dis      0      1
+Glycemic_control                 
+0                    13945  14846
+1                    21271  27662
+Chi-square = 180.16, p-value = 4.461e-41
