@@ -10,10 +10,7 @@ df_good = df[df["Glycemic_control"] == 0]
 df_poor = df[df["Glycemic_control"] == 1]
 
 
-# ===============================
 # Descriptive Statistics
-# ===============================
-
 control_ratio = df["Glycemic_control"].value_counts(normalize=True)
 print(control_ratio)
 
@@ -70,10 +67,8 @@ df_good[dm_meds].mean()
 df_poor[dm_meds].mean()
 
 
-# ===============================
-# Statistical Analyze
-# ===============================
 
+# Statistical Analyze
 # t-test
 from scipy.stats import ttest_ind
 
@@ -90,15 +85,13 @@ table = pd.crosstab(df["Glycemic_control"], df["hypertension_i10"])
 chi2_contingency(table)
 
 
-# ===============================
 # EDA Visualization using matplotlib
 # Grouped by Glycemic_control
-# ===============================
 
 import matplotlib.pyplot as plt
 
 
-# ---------- Figure 1: Glycemic control proportion ----------
+# Glycemic control proportion
 title = "Proportion_of_Glycemic_Control_Status"
 
 plt.figure()
@@ -109,7 +102,7 @@ plt.title(title)
 plt.savefig("./plt_output/" + title)
 plt.show()
 
-# ---------- Figure 2: Age distribution (boxplot) ----------
+# Age distribution (boxplot) 
 title = "Age_Distribution_by_Glycemic_Control"
 
 plt.figure()
@@ -119,7 +112,7 @@ plt.title(title)
 plt.savefig("./plt_output/" + title)
 plt.show()
 
-# ---------- Figure 3: Sex proportion ----------
+# Sex proportion 
 title = "Sex_Distribution_by_Glycemic_Control"
 
 sex_prop = pd.DataFrame({
@@ -140,7 +133,7 @@ plt.savefig("./plt_output/" + title)
 plt.legend()
 plt.show()
 
-# ---------- Figure 4: Lipid profile target achievement ----------
+# Lipid profile target achievement 
 title = "Lipid_Profile_Control_by_Glycemic_Status"
 
 lipid_good = {
@@ -168,7 +161,7 @@ plt.savefig("./plt_output/" + title)
 plt.legend()
 plt.show()
 
-# ---------- Figure 5: Creatinine distribution ----------
+# Creatinine distribution 
 title = "Creatinine_Distribution_by_Glycemic_Control"
 
 plt.figure()
@@ -181,7 +174,7 @@ plt.title(title)
 plt.savefig("./plt_output/" + title)
 plt.show()
 
-# ---------- Figure 6: Comorbidities prevalence ----------
+# Comorbidities prevalence 
 title = "Comorbidities_by_Glycemic_Control"
 
 comorbidities = ["nephropaties", "hypertension_i10", "ischemic_heart_dis"]
@@ -201,7 +194,7 @@ plt.savefig("./plt_output/{title}")
 plt.legend()
 plt.show()
 
-# ---------- Figure 7: Diabetes medication usage ----------
+# Diabetes medication usage 
 title = "Diabetes_Medication_Usage_by_Glycemic_Control"
 
 meds = ["metformin_hcl", "insulin_glarjin", "dapagliflozin", "sitagliptin"]
@@ -221,7 +214,7 @@ plt.savefig("./plt_output/" + title)
 plt.legend()
 plt.show()
 
-# ---------- Figure 8A: HbA1c boxplot ----------
+# HbA1c boxplot 
 title = "HbA1c_Distribution_by_Glycemic_Control"
 
 plt.figure()
@@ -234,7 +227,7 @@ plt.title(title)
 plt.savefig("./plt_output/" + title)
 plt.show()
 
-# ---------- Figure 8B: HbA1c change boxplot ----------
+# HbA1c change boxplot 
 title = "HbA1c_Change_by_Glycemic_Control"
 
 plt.figure()
@@ -248,10 +241,7 @@ plt.savefig("./plt_output/" + title)
 plt.show()
 
 
-# ===============================
 # Export Table
-# ===============================
-
 summary = pd.DataFrame(columns=["Glycemic control: Good", "Glycemic control: Poor"])
 
 # Continuous var: age, creatinine
