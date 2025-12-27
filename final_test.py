@@ -5,8 +5,8 @@ import pandas as pd
 
 df = pd.read_csv("./data/data_export_icin.csv", sep=';')
 
-# print(df)
-# print(df.columns)
+print(df)
+print(df.columns)
 print(df.info)
 
 for col in df.columns:
@@ -14,7 +14,7 @@ for col in df.columns:
 
 # check missing values
 print("\nmissing values: ")
-print(df.isnull().sum())
+print(df.isnull().sum().to_string())
 
 
 
